@@ -1,0 +1,133 @@
+{
+  "info": {
+    "_postman_id": "383c74e6-baec-4699-9617-1efa8fab4cfe",
+    "name": "agency-client",
+    "schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json",
+    "_exporter_id": "21165980"
+  },
+  "item": [
+    {
+      "name": "create-agency-client",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "x-auth-token",
+            "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY2NTYxZjg2MmZhYjU5M2U4NDYxY2Y5MiIsImlhdCI6MTcxNjkyMDIwNH0.PenVMD60T2bak0ivP1CHS8GGpMi82GIAHuTDW_48xlQ"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n    \"name\": \"Agency Name\",\r\n    \"address1\": \"123 Main St\",\r\n    \"address2\": \"Suite 100\",\r\n    \"state\": \"CA\",\r\n    \"city\": \"Los Angeles\",\r\n    \"phoneNumber\": \"555-555-5555\",\r\n    \"clients\": [\r\n        {\r\n            \"name\": \"Client 1\",\r\n            \"email\": \"client1@example.com\",\r\n            \"phoneNumber\": \"555-555-5551\",\r\n            \"totalBill\": 1000\r\n        },\r\n        {\r\n            \"name\": \"Client 2\",\r\n            \"email\": \"client2@example.com\",\r\n            \"phoneNumber\": \"555-555-5552\",\r\n            \"totalBill\": 2000\r\n        }\r\n    ]\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": "http://localhost:5000/api/agency-client"
+      },
+      "response": []
+    },
+    {
+      "name": "create-user",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n    \"name\": \"example\",\r\n    \"email\": \"example@gmail.com\",\r\n    \"password\":\"12345\"\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": "http://localhost:5000/api/signup"
+      },
+      "response": []
+    },
+    {
+      "name": "login-user",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n    \"email\": \"example@gmail.com\",\r\n    \"password\":\"12345\"\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": "http://localhost:5000/api/login"
+      },
+      "response": []
+    },
+    {
+      "name": "New Request",
+      "request": {
+        "method": "PUT",
+        "header": [
+          {
+            "key": "x-auth-token",
+            "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY2NTYxZjg2MmZhYjU5M2U4NDYxY2Y5MiIsImlhdCI6MTcxNjkyMDIwNH0.PenVMD60T2bak0ivP1CHS8GGpMi82GIAHuTDW_48xlQ"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n    \"name\": \"update Client 1\",\r\n    \"email\": \"updateclient1@example.com\",\r\n    \"phoneNumber\": \"1234567890\",\r\n    \"totalBill\": 3000\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": "http://localhost:5000/api/client/"
+      },
+      "response": []
+    },
+    {
+      "name": "New Request",
+      "request": {
+        "method": "GET",
+        "header": [
+          {
+            "key": "x-auth-token",
+            "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY2NTYxZjg2MmZhYjU5M2U4NDYxY2Y5MiIsImlhdCI6MTcxNjkyMDIwNH0.PenVMD60T2bak0ivP1CHS8GGpMi82GIAHuTDW_48xlQ"
+          }
+        ],
+        "url": "http://localhost:5000/api/top-client"
+      },
+      "response": []
+    }
+  ],
+  "event": [
+    {
+      "listen": "prerequest",
+      "script": {
+        "type": "text/javascript",
+        "exec": [
+          ""
+        ]
+      }
+    },
+    {
+      "listen": "test",
+      "script": {
+        "type": "text/javascript",
+        "exec": [
+          ""
+        ]
+      }
+    }
+  ],
+  "variable": [
+    {
+      "key": "url",
+      "value": "https://reqres.in",
+      "type": "string"
+    }
+  ]
+}
